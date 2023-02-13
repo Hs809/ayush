@@ -95,6 +95,7 @@ table{
     vertical-align: top;
     text-align: center;
     border-top: 1px solid var(--border);
+    font-family: sans-serif;
 }
 
 .table td > a.btn{
@@ -157,7 +158,9 @@ table{
 }
 
 #update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"]{
+.form .form-group input[type="text"],
+.form .form-group input[type="number"],
+.form .form-group input[type="date"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;

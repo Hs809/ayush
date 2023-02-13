@@ -9,19 +9,22 @@ exports.create = (req,res)=>{
     }
 
     // new user
+    const date = new Date(req.body.dob).toLocaleDateString("en-US")
+    console.log({date});
     const user = new Userdb({
+        code : req.body.code,
         name : req.body.name,
-        email : req.body.email,
-        gender: req.body.gender,
-        status : req.body.status
+        dob: date,
+        department : req.body.department,
+        salary : req.body.salary,
     })
 
     // save user in the database
     user
         .save(user)
         .then(data => {
-            //res.send(data)
-            res.redirect('/add-user');
+            // res.send(data)
+            res.redirect('/');
         })
         .catch(err =>{
             res.status(500).send({
@@ -64,6 +67,7 @@ exports.find = (req, res)=>{
 
 // Update a new idetified user by user id
 exports.update = (req, res)=>{
+    console.log({body: req.body});
     if(!req.body){
         return res
             .status(400)

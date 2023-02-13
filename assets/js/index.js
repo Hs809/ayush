@@ -2,10 +2,12 @@
 
 
 $("#add_user").submit(function(event){
-    alert("Data Inserted Successfully!");
+    // alert("Data Inserted Successfully!");
+    location.reload();
 })
 
 $("#update_user").submit(function(event){
+    console.log("event is runnign");
     event.preventDefault();
 
     var unindexed_array = $(this).serializeArray();
@@ -23,7 +25,8 @@ $("#update_user").submit(function(event){
     }
 
     $.ajax(request).done(function(response){
-        alert("Data Updated Successfully!");
+        // alert("Data Updated Successfully!");
+        location.reload();
     })
 
 })

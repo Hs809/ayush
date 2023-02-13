@@ -8,7 +8,7 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
-                <a href="/add-user" class="border-shadow">
+                <a href="/" class="border-shadow">
                     <span class="text-gradient">New User <i class="fas fa-user"></i></span>
                 </a>
             </div>
@@ -18,11 +18,11 @@
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
-                            <th>ID</th>
+                            <th>Code</th>
                             <th>Name</th>
-                            <th>@Email</th>
-                            <th>Gender</th>
-                            <th>Status</th>
+                            <th>DOB</th>
+                            <th>Department</th>
+                            <th>Salary</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -30,12 +30,9 @@
                         <%- include('include/_show') %>
                     </tbody>
                 </table>
-            </form>
+            </form>            
         </div>
+        <%- include('./add_user') %>
     </main>
 <!-- /Main Site -->
 
-
-<!-- include footer -->
-<%- include('include/_footer') %>
-<!-- /include footer -->
